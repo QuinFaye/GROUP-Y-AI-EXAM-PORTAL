@@ -1,0 +1,140 @@
+.examiner-dashboard {
+    display: flex;
+    height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background-color: #2E326E;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 10;
+    margin-left: 220px; /* Adjusted to account for side-nav */
+  }
+  
+  .logout-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .exam-info {
+    display: flex;
+    gap: 20px;
+    font-size: 14px;
+  }
+  
+  .side-nav {
+    width: 220px;
+    background-color: #414067;
+    color: white;
+    padding-top: 70px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 15;
+  }
+  
+  .side-nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .side-nav li {
+    padding: 15px 20px;
+    cursor: pointer;
+  }
+  
+  .side-nav li:hover {
+    background-color: #2E326E;
+  }
+  
+  .main-content {
+    margin-left: 220px;
+    padding: 80px 20px 20px;
+    width: calc(100% - 220px);
+  }
+  
+/* Hamburger button */
+.hamburger {
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: #2E326E;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    z-index: 5;
+    cursor: pointer;
+    display: none;
+  }
+  
+  /* Mobile Overlay */
+  .mobile-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #2E326E;
+    color: white;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+  
+  /* Close button */
+  .close-btn {
+    align-self: flex-end;
+    font-size: 26px;
+    background: none;
+    border: none;
+    color: white;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+  
+  /* Mobile nav menu */
+  .mobile-menu {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+  }
+  
+  .mobile-menu li {
+    padding: 15px 0;
+    border-bottom: 1px solid white;
+    width: 100%;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .side-nav {
+      display: none;
+    }
+  
+    .main-content {
+      margin-left: 0; 
+    }
+
+    .top-nav {
+        margin-left: 0 !important;
+      }
+  
+      .hamburger {
+        display: block;
+  }
+}
+  
